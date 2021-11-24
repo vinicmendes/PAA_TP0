@@ -6,4 +6,7 @@ typedef struct quadro
 {
     int linha;
     int coluna[80];
+
 }Quadro;
+
+void gera_quadro(Quadro *q);
