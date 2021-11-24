@@ -5,5 +5,5 @@
 typedef struct quadro
 {
     int linha;
-    int coluna[80]
+    int coluna[80];
 }Quadro;
