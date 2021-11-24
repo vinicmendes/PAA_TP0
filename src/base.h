@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct quadro
+typedef struct Linha
 {
-    int linha;
+    int Idlinha;
     int coluna[80];
 
-}Quadro;
+}Linha;
 
-void gera_quadro(Quadro *q);
+void gera_quadro(Linha *q);
