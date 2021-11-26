@@ -20,3 +20,4 @@ void libera_quadro(apQuadro *quadro);
 int gera_posicao(apQuadro *quadro, int max, int min);
 void insere_asterisco(apQuadro *quadro);
 void insere_soma(apQuadro *quadro);
+void insere_vezes(apQuadro *quadro);
