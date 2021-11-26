@@ -14,3 +14,5 @@ typedef struct Quadro
 
 void gera_quadro_vazio(apQuadro*  quadro);
 void preenche_quadro (apQuadro* quadro);
+void imprime_quadro (apQuadro quadro);
+void libera_quadro (apQuadro* quadro);

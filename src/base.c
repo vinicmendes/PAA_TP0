@@ -12,18 +12,46 @@ void preenche_quadro(apQuadro* quadro){
         for(int j=0;j<80;j++){
             if(i==0 || i == 19){
                 (*quadro)->matriz[i][j] = 2;
-                // printf("%d",(*quadro)->coluna[j]);
             }
             else{
                 if(j==0 || j == 79){
                     (*quadro)-> matriz[i][j] = 3;
-                    // printf("%d",(*quadro)->coluna[j]);
+
                 }
                 else{
                     (*quadro)->matriz[i][j] = 0;
-                    // printf("%d",(*quadro)->coluna[j]);
                 }
             }
         }
     }
+}
+
+void imprime_quadro (apQuadro quadro){
+    for(int i=0;i<20;i++){
+        for(int j=0;j<80;j++){
+            if(quadro->matriz[i][j] == 0 || quadro->matriz[i][j] == 4){
+                printf(" ");
+            }
+            else{
+                if(quadro->matriz[i][j] == 1){
+                    printf("*");
+                }
+                else{
+                    if(quadro->matriz[i][j] == 2){
+                        printf("-");
+                    }
+                    else{
+                        if(quadro->matriz[i][j] == 3){
+                            printf("|");
+                        }
+                    }
+                }
+            }
+        }
+        printf("\n");
+    }
+}
+
+void libera_quadro(apQuadro* quadro){
+    free(*quadro);
 }
