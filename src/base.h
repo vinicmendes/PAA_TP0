@@ -9,4 +9,4 @@ typedef struct Linha
 
 }Linha;
 
-void gera_quadro(Linha *q);
+void gera_quadro(Linha *quadro);
