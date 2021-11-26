@@ -1,7 +1,7 @@
 #include "base.h"
 
-
-int main(){
+int main()
+{
     apQuadro obra;
     gera_quadro_vazio(&obra);
     preenche_quadro(&obra);
