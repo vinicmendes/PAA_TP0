@@ -1,4 +1,4 @@
-#include "base.h"
+#include "quadro.h"
 
 void gera_quadro_vazio(apQuadro *quadro)
 {

@@ -1,5 +1,5 @@
 all:
-	gcc main.c base.c -o main
+	gcc main.c quadro.c menu.c -o main
 run:
 	./main
 clean:

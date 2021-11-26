@@ -1,6 +1,8 @@
 *******************VERIFICAR ENTRADAS PERTO DE 100 DANDO SEGMENTATION NECESSÁRIO OTIMIZAÇÃO******************
 
 
+--------------- FAZER IFNDEF ---------------------------
+
 restrições:
 
 - linha - 1 > 0 && linha + 1 < 19
@@ -34,6 +36,29 @@ restrições:
 2 - soma	-> escolher qtd
 3 - vezes	-> escolher qtd	
 4 - aleatório   -> escolher qtd
+
+------------------ se sobrepor * vira outro simbolo ------------------------
+
+|** |
+| **|
+|** |
+
+| **|
+|** |
+| **|
+
+| * |
+|***|
+|* *|
+
+|* *|
+|***|
+| * |
+
+
+
+
+
 
 
 
