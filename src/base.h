@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+typedef struct Linha *Quadro;
 typedef struct Linha
 {
     int Idlinha;
@@ -9,4 +10,4 @@ typedef struct Linha
 
 }Linha;
 
-void gera_quadro(Linha *quadro);
+void gera_quadro(Quadro quadro);
