@@ -7,11 +7,12 @@ int main()
     gera_quadro_vazio(&obra);
     preenche_quadro(&obra);
     //gera_posicao(&obra, 10, 0);
-    for (int i = 0; i < 90; i++)
+    for (int i = 0; i < 10; i++)
     {
         //insere_asterisco(&obra);
         //insere_soma(&obra);
-        insere_vezes(&obra);
+        //insere_vezes(&obra);
+        //insere_aleatorio(&obra, 10);
     }
 
     imprime_quadro(obra);

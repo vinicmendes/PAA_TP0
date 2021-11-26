@@ -102,22 +102,20 @@ void insere_soma(apQuadro *quadro)
     int linha, coluna;
     linha = gera_posicao(quadro, 18, 1);
     coluna = gera_posicao(quadro, 78, 1);
-    if ((*quadro)->matriz[linha][coluna] == 0 && (*quadro)->matriz[linha - 1][coluna] == 0 
-        && (*quadro)->matriz[linha + 1][coluna] == 0 && (*quadro)->matriz[linha][coluna - 1] == 0 && 
-        (*quadro)->matriz[linha][coluna + 1] == 0 && (*quadro)->matriz[linha-1][coluna-1] == 0 && 
-        (*quadro)->matriz[linha-1][coluna+1] == 0 && (*quadro)->matriz[linha+1][coluna-1] == 0 && 
-        (*quadro)->matriz[linha+1][coluna+1] == 0 && (linha - 1) > 0 && (linha + 1) < 19 && (coluna - 1) > 0 
-        && (coluna + 1) < 79)
+    if ((*quadro)->matriz[linha][coluna] == 0 && (*quadro)->matriz[linha - 1][coluna] == 0 && (*quadro)->matriz[linha + 1][coluna] == 0 && (*quadro)->matriz[linha][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha][coluna + 1] == 0 && (*quadro)->matriz[linha - 1][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha - 1][coluna + 1] == 0 && (*quadro)->matriz[linha + 1][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha + 1][coluna + 1] == 0 && (linha - 1) > 0 && (linha + 1) < 19 && (coluna - 1) > 0 && (coluna + 1) < 79)
     {
         (*quadro)->matriz[linha][coluna] = 1;
         (*quadro)->matriz[linha][coluna + 1] = 1;
         (*quadro)->matriz[linha][coluna - 1] = 1;
-        (*quadro)->matriz[linha +1 ][coluna] = 1;
-        (*quadro)->matriz[linha -1 ][coluna] = 1;
-        (*quadro)->matriz[linha -1 ][coluna +1] = 4;
-        (*quadro)->matriz[linha -1 ][coluna -1] = 4;
-        (*quadro)->matriz[linha +1 ][coluna +1] = 4;
-        (*quadro)->matriz[linha +1 ][coluna -1] = 4;
+        (*quadro)->matriz[linha + 1][coluna] = 1;
+        (*quadro)->matriz[linha - 1][coluna] = 1;
+        (*quadro)->matriz[linha - 1][coluna + 1] = 4;
+        (*quadro)->matriz[linha - 1][coluna - 1] = 4;
+        (*quadro)->matriz[linha + 1][coluna + 1] = 4;
+        (*quadro)->matriz[linha + 1][coluna - 1] = 4;
     }
     else
     {
@@ -125,28 +123,44 @@ void insere_soma(apQuadro *quadro)
     }
 }
 
-void insere_vezes(apQuadro *quadro){
+void insere_vezes(apQuadro *quadro)
+{
     int linha, coluna;
     linha = gera_posicao(quadro, 18, 1);
     coluna = gera_posicao(quadro, 78, 1);
-    if ((*quadro)->matriz[linha][coluna] == 0 && (*quadro)->matriz[linha - 1][coluna] == 0 
-        && (*quadro)->matriz[linha + 1][coluna] == 0 && (*quadro)->matriz[linha][coluna - 1] == 0 && 
-        (*quadro)->matriz[linha][coluna + 1] == 0 && (*quadro)->matriz[linha-1][coluna-1] == 0 && 
-        (*quadro)->matriz[linha-1][coluna+1] == 0 && (*quadro)->matriz[linha+1][coluna-1] == 0 && 
-        (*quadro)->matriz[linha+1][coluna+1] == 0 && (linha - 1) > 0 && (linha + 1) < 19 && (coluna - 1) > 0 
-        && (coluna + 1) < 79)
+    if ((*quadro)->matriz[linha][coluna] == 0 && (*quadro)->matriz[linha - 1][coluna] == 0 && (*quadro)->matriz[linha + 1][coluna] == 0 && (*quadro)->matriz[linha][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha][coluna + 1] == 0 && (*quadro)->matriz[linha - 1][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha - 1][coluna + 1] == 0 && (*quadro)->matriz[linha + 1][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha + 1][coluna + 1] == 0 && (linha - 1) > 0 && (linha + 1) < 19 && (coluna - 1) > 0 && (coluna + 1) < 79)
     {
         (*quadro)->matriz[linha][coluna] = 1;
         (*quadro)->matriz[linha][coluna + 1] = 4;
         (*quadro)->matriz[linha][coluna - 1] = 4;
-        (*quadro)->matriz[linha +1 ][coluna] = 4;
-        (*quadro)->matriz[linha -1 ][coluna] = 4;
-        (*quadro)->matriz[linha -1 ][coluna +1] = 1;
-        (*quadro)->matriz[linha -1 ][coluna -1] = 1;
-        (*quadro)->matriz[linha +1 ][coluna +1] = 1;
-        (*quadro)->matriz[linha +1 ][coluna -1] = 1;
+        (*quadro)->matriz[linha + 1][coluna] = 4;
+        (*quadro)->matriz[linha - 1][coluna] = 4;
+        (*quadro)->matriz[linha - 1][coluna + 1] = 1;
+        (*quadro)->matriz[linha - 1][coluna - 1] = 1;
+        (*quadro)->matriz[linha + 1][coluna + 1] = 1;
+        (*quadro)->matriz[linha + 1][coluna - 1] = 1;
     }
     else
+    {
+        insere_vezes(quadro);
+    }
+}
+
+void insere_aleatorio(apQuadro *quadro, int quantidade)
+{
+    int random = rand() % 3 + 1;
+    if (random == 1)
+    {
+        insere_asterisco(quadro);
+    }
+    else if (random == 2)
+    {
+        insere_soma(quadro);
+    }
+    else if (random == 3)
     {
         insere_vezes(quadro);
     }
