@@ -99,7 +99,7 @@ void insere_soma(apQuadro *quadro)
     int linha, coluna;
     linha = gera_posicao(quadro, 18, 1);
     coluna = gera_posicao(quadro, 78, 1);
-    if((*quadro)->matriz[linha][coluna] == 0 && ){
+    if((*quadro)->matriz[linha][coluna] == 0){
         (*quadro)->matriz[linha][coluna] = 1;
         (*quadro)->matriz[linha][coluna+1] = 1;
         (*quadro)->matriz[linha][coluna-1] = 1;
