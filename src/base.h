@@ -2,15 +2,15 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct Linha *Quadro;
+typedef struct Quadro *apQuadro;
 //lista de colunas armazenando números correspondentes a cada caractere: 0 == " ", 1 == "*", 2 == "-", 3 == "|",
 //4 == " "(espaços da figura que não podem ser violados); 
-typedef struct Linha
+typedef struct Quadro
 {
     int Idlinha;
-    int coluna[20][80];
+    int matriz[20][80];
 
-}Linha;
+}Quadro;
 
-void gera_quadro_vazio(Quadro* quadro);
-void preenche_quadro (Quadro* quadro);
+void gera_quadro_vazio(apQuadro*  quadro);
+void preenche_quadro (apQuadro* quadro);
