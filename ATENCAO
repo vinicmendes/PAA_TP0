@@ -1,0 +1,57 @@
+*******************VERIFICAR ENTRADAS PERTO DE 100 DANDO SEGMENTATION NECESSÁRIO OTIMIZAÇÃO******************
+
+
+restrições:
+
+- linha - 1 > 0 && linha + 1 < 19
+- coluna - 1 > 0 && linha + 1 < 79
+
+
+- matriz[i][j] (centro)
+- matriz[i-1][j] (centro cima)
+- matriz[i+1][j] (centro abaixo)
+- matriz[i][j-1] (centro esquerda)
+- matriz[i][j+1] (centro direita)
+
+- matriz[i-1][j-1] (diagonal esquerda sup)
+- matriz[i-1][j+1] (diagonal direita sup)
+- matriz[i+1][j-1] (diagonal esquerda inf)
+- matriz[i+1][j+1] (diagonal direita inf)
+
+|414|
+|111|
+|414|
+
+|141|
+|414|
+|141|
+
+
+
+
+
+1 - simples	-> escolher qtd
+2 - soma	-> escolher qtd
+3 - vezes	-> escolher qtd	
+4 - aleatório   -> escolher qtd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
