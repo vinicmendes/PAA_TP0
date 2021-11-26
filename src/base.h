@@ -8,9 +8,9 @@ typedef struct Linha *Quadro;
 typedef struct Linha
 {
     int Idlinha;
-    int coluna[80];
+    int coluna[20][80];
 
 }Linha;
 
-void gera_quadro_vazio(Quadro quadro);
-void preenche_quadro (Quadro quadro);
+void gera_quadro_vazio(Quadro* quadro);
+void preenche_quadro (Quadro* quadro);
