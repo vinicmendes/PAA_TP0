@@ -107,8 +107,4 @@ void insere_soma(apQuadro *quadro)
     else{
         insere_soma(quadro);
     }
-}
-
-  *
-* * *
-  *    
+}  
