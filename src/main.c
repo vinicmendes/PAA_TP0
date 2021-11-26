@@ -13,6 +13,9 @@ int main(){
                 if(j==0 || j == 79){
                     printf("|");
                 }
+                else{
+                    printf(" ");
+                }
             }
         }
         printf("\n");
