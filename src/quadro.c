@@ -148,6 +148,71 @@ void insere_vezes(apQuadro *quadro)
         insere_vezes(quadro);
     }
 }
+void insere_seta(apQuadro *quadro)
+{
+    int linha, coluna, direcao;
+    linha = gera_posicao(quadro, 18, 1);
+    coluna = gera_posicao(quadro, 78, 1);
+    direcao = gera_posicao(quadro, 13, 10);
+    if ((*quadro)->matriz[linha][coluna] == 0 && (*quadro)->matriz[linha - 1][coluna] == 0 && (*quadro)->matriz[linha + 1][coluna] == 0 && (*quadro)->matriz[linha][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha][coluna + 1] == 0 && (*quadro)->matriz[linha - 1][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha - 1][coluna + 1] == 0 && (*quadro)->matriz[linha + 1][coluna - 1] == 0 &&
+        (*quadro)->matriz[linha + 1][coluna + 1] == 0 && (linha - 1) > 0 && (linha + 1) < 19 && (coluna - 1) > 0 && (coluna + 1) < 79)
+    {
+        if (direcao == 10)
+        {
+            (*quadro)->matriz[linha][coluna] = 1;
+            (*quadro)->matriz[linha][coluna + 1] = 1;
+            (*quadro)->matriz[linha][coluna - 1] = 4;
+            (*quadro)->matriz[linha + 1][coluna] = 1;
+            (*quadro)->matriz[linha - 1][coluna] = 1;
+            (*quadro)->matriz[linha - 1][coluna + 1] = 4;
+            (*quadro)->matriz[linha - 1][coluna - 1] = 1;
+            (*quadro)->matriz[linha + 1][coluna + 1] = 4;
+            (*quadro)->matriz[linha + 1][coluna - 1] = 1;
+        }
+        else if (direcao == 11)
+        {
+            (*quadro)->matriz[linha][coluna] = 1;
+            (*quadro)->matriz[linha][coluna + 1] = 4;
+            (*quadro)->matriz[linha][coluna - 1] = 1;
+            (*quadro)->matriz[linha + 1][coluna] = 1;
+            (*quadro)->matriz[linha - 1][coluna] = 1;
+            (*quadro)->matriz[linha - 1][coluna + 1] = 1;
+            (*quadro)->matriz[linha - 1][coluna - 1] = 4;
+            (*quadro)->matriz[linha + 1][coluna + 1] = 1;
+            (*quadro)->matriz[linha + 1][coluna - 1] = 4;
+        }
+        else if (direcao == 12)
+        {
+            (*quadro)->matriz[linha][coluna] = 1;
+            (*quadro)->matriz[linha][coluna + 1] = 1;
+            (*quadro)->matriz[linha][coluna - 1] = 1;
+            (*quadro)->matriz[linha + 1][coluna] = 4;
+            (*quadro)->matriz[linha - 1][coluna] = 1;
+            (*quadro)->matriz[linha - 1][coluna + 1] = 4;
+            (*quadro)->matriz[linha - 1][coluna - 1] = 4;
+            (*quadro)->matriz[linha + 1][coluna + 1] = 1;
+            (*quadro)->matriz[linha + 1][coluna - 1] = 1;
+        }
+        else
+        {
+            (*quadro)->matriz[linha][coluna] = 1;
+            (*quadro)->matriz[linha][coluna + 1] = 1;
+            (*quadro)->matriz[linha][coluna - 1] = 1;
+            (*quadro)->matriz[linha + 1][coluna] = 1;
+            (*quadro)->matriz[linha - 1][coluna] = 4;
+            (*quadro)->matriz[linha - 1][coluna + 1] = 1;
+            (*quadro)->matriz[linha - 1][coluna - 1] = 1;
+            (*quadro)->matriz[linha + 1][coluna + 1] = 4;
+            (*quadro)->matriz[linha + 1][coluna - 1] = 4;
+        }
+    }
+    else
+    {
+        insere_soma(quadro);
+    }
+}
 
 void insere_aleatorio(apQuadro *quadro, int quantidade)
 {

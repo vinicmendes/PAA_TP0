@@ -56,6 +56,14 @@ int gera_menu()
             imprime_quadro(obra);
             libera_quadro(&obra);
             break;
+        case 5:
+            for (int i = 0; i < quantidade_figuras; i++)
+            {
+                insere_seta(&obra);
+            }
+            imprime_quadro(obra);
+            libera_quadro(&obra);
+            break;
         }
     }
 

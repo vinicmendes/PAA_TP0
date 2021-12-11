@@ -20,13 +20,19 @@ restrições:
 - matriz[i+1][j-1] (diagonal esquerda inf)
 - matriz[i+1][j+1] (diagonal direita inf)
 
+
+13
+|* *|
+|***|
+| * |
+
 |414|
 |111|
 |414|
 
-|141|
-|414|
-|141|
+|114|
+|411|
+|114|
 
 
 
@@ -38,19 +44,19 @@ restrições:
 4 - aleatório   -> escolher qtd
 
 ------------------ se sobrepor * vira outro simbolo ------------------------
-
-|** |
+10
+|** | 
 | **|
 |** |
-
+11
 | **|
 |** |
 | **|
-
+12
 | * |
 |***|
 |* *|
-
+13
 |* *|
 |***|
 | * |
