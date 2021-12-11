@@ -21,10 +21,7 @@ restrições:
 - matriz[i+1][j+1] (diagonal direita inf)
 
 
-13
-|* *|
-|***|
-| * |
+
 
 |414|
 |111|

@@ -210,7 +210,7 @@ void insere_seta(apQuadro *quadro)
     }
     else
     {
-        insere_soma(quadro);
+        insere_seta(quadro);
     }
 }
 
