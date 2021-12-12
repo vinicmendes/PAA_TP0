@@ -6,6 +6,8 @@
 typedef struct Quadro *apQuadro;
 //lista de colunas armazenando números correspondentes a cada caractere: 0 == " ", 1 == "*", 2 == "-", 3 == "|",
 //4 == " "(espaços da figura que não podem ser violados);
+
+// para opção 5 -> 5 = "1", 6 = "2", 7 = "3", 8 = "4", 9 = "5"
 typedef struct Quadro
 {
     int Idlinha;
@@ -22,4 +24,6 @@ void insere_asterisco(apQuadro *quadro);
 void insere_soma(apQuadro *quadro);
 void insere_vezes(apQuadro *quadro);
 void insere_seta(apQuadro *quadro);
+void insere_seta2(apQuadro *quadro); //teste
+void imprime_seta(apQuadro quadro);  //teste
 void insere_aleatorio(apQuadro *quadro, int quantidade);

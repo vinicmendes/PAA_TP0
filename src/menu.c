@@ -59,9 +59,9 @@ int gera_menu()
         case 5:
             for (int i = 0; i < quantidade_figuras; i++)
             {
-                insere_seta(&obra);
+                insere_seta2(&obra);
             }
-            imprime_quadro(obra);
+            imprime_seta(obra);
             libera_quadro(&obra);
             break;
         }
