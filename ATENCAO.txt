@@ -40,20 +40,20 @@ restrições:
 3 - vezes	-> escolher qtd	
 4 - aleatório   -> escolher qtd
 
------------------- se sobrepor * vira outro simbolo ------------------------
-10
+------------------ simbolo escolhido ------------------------
+---------Ocorre a randomização da direção do simbolo---------
 |** | 
 | **|
 |** |
-11
+
 | **|
 |** |
 | **|
-12
+
 | * |
 |***|
 |* *|
-13
+
 |* *|
 |***|
 | * |
