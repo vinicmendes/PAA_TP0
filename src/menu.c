@@ -32,7 +32,7 @@ int gera_menu()
         if(quantidade_figuras > 100){
             quantidade_figuras = 100;
         }
-        system("clear||cls");
+        //system("clear||cls");
         switch (opcao)
         {
         case 1:
