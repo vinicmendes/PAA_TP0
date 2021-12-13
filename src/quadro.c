@@ -1,5 +1,6 @@
 #include "quadro.h"
 
+
 void gera_quadro_vazio(apQuadro *quadro)
 {
     *quadro = (apQuadro)(malloc(sizeof(Quadro)));

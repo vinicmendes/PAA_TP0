@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 
+
 typedef struct Quadro *apQuadro;
 //lista de colunas armazenando números correspondentes a cada caractere: 0 == " ", 1 == "*", 2 == "-", 3 == "|",
 //4 == " "(espaços da figura que não podem ser violados);
