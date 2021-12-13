@@ -10,18 +10,26 @@ int gera_menu()
         preenche_quadro(&obra);
         int opcao;
         int quantidade_figuras;
-        printf("PROGRAMA GERADOR DE OBRA DE ARTE:\n");
-        printf("=================================\n");
-        printf("Escolha o tipo de figura basica a ser usada para criar a obra:\n");
+        printf("================ PROGRAMA GERADOR DE OBRA DE ARTE ================\n");
+        printf("       Escolha o tipo desejada para criar uma obra de arte:       \n");
         printf("1 - Asterisco simples.\n");
         printf("2 - Simbolo de soma com asteriscos.\n");
         printf("3 - Letra X com asteriscos.\n");
         printf("4 - Figuras aleatorias\n");
-        printf("5 – Obra de arte.\n");
+        printf("5 - Obra de arte (setas compostas por simbolos variados).\n");
+        printf("6 - Sair.\n");
+        printf("==================================================================\n");
         printf("Indique a opcao desejada: ");
         scanf("%d", &opcao);
+        if (opcao == 6)
+        {
+            break;
+        }
         printf("Indique a quantidade de figuras: ");
         scanf("%d", &quantidade_figuras);
+        if(quantidade_figuras > 100){
+            quantidade_figuras = 100;
+        }
         switch (opcao)
         {
         case 1:

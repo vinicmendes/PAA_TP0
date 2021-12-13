@@ -3,10 +3,7 @@
 void gera_quadro_vazio(apQuadro *quadro)
 {
     *quadro = (apQuadro)(malloc(sizeof(Quadro)));
-    //provisório
-    // for(int i=0;i<19;i++){
-    //     quadro->Idlinha=i;
-    // }
+
 }
 void preenche_quadro(apQuadro *quadro)
 {
@@ -213,7 +210,7 @@ void insere_seta(apQuadro *quadro)
         insere_seta(quadro);
     }
 }
-//-------------------------------------------------------------------TESTE-------------------------------------------------
+
 void insere_seta2(apQuadro *quadro)
 {
     int linha, coluna, direcao, simbolo;
@@ -308,34 +305,34 @@ void imprime_seta(apQuadro quadro)
 
             if (quadro->matriz[i][j] == 5)
             {
-                printf("1");
+                printf("+");
             }
 
             if (quadro->matriz[i][j] == 6)
             {
-                printf("2");
+                printf("!");
             }
 
             if (quadro->matriz[i][j] == 7)
             {
-                printf("3");
+                printf(".");
             }
 
             if (quadro->matriz[i][j] == 8)
             {
-                printf("4");
+                printf(",");
             }
 
             if (quadro->matriz[i][j] == 9)
             {
-                printf("5");
+                printf("?");
             }
         }
         printf("\n");
     }
 }
 
-//----------------------------------------------------------------FIM TESTE-------------------------------------------------
+
 void insere_aleatorio(apQuadro *quadro, int quantidade)
 {
     int random = rand() % 3 + 1;
